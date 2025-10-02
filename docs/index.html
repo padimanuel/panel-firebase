@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Admin de Place</title>
-  </head>
-  <body class="bg-gray-50 text-gray-800">
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panel Firebase</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-database-compat.js"></script>
+
+  <script>
+    // Reemplaza con tu configuración de Firebase
+    const firebaseConfig = {
+       apiKey: "AIzaSyBwzuNZsIRzNr11V-nQDaLj9sJI2Y0nuew",
+      authDomain: "androidbar.firebaseapp.com",
+      projectId: "androidbar",
+      storageBucket: "androidbar.firebasestorage.app",
+      messagingSenderId: "580141798965",
+      appId: "1:580141798965:web:e408ec3616cfc3a8dc037c",
+      measurementId: "G-E846SE1JD8"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- Tu app -->
+  <script type="module" src="../src/app.js"></script>
+  <script type="module" src="../src/components/Lista.js"></script>
+</body>
 </html>
